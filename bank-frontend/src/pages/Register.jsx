@@ -19,7 +19,7 @@ export default function Register() {
     const res = await register(name, email, username, password, 'customer');
 
     if (res && res.id) {
-      setMsg('Account created. Redirecting to Transactions…');
+      setMsg('Account created. Redirecting to Login…');
       setTimeout(() => navigate('/transactions'), 1000);
     } else {
       setMsg(res.error || 'Registration failed');
