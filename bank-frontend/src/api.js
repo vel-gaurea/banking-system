@@ -5,6 +5,7 @@ function authHeaders() {
   return token ? { 'Authorization': `Bearer ${token}`, 'Content-Type': 'application/json' } : { 'Content-Type': 'application/json' };
 }
 
+
 export async function login(identifier, password) {
   const res = await fetch(`${API_BASE}/auth/login`, {
     method: 'POST',
